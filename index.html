@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <title>My Routine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="clipboard (1).png">
+    <link rel="apple-touch-icon" href="clipboard (1).png">
+    <meta name="theme-color" content="#7b5cff">
+</head>
+<body>
+    <div class="container" id="app">
+        <header>
+            <h1>My Routine <span class="brand-sub">— Seu dia mais produtivo</span></h1>
+            <div class="controls">
+                <button id="themeToggle" class="theme-toggle" title="Alternar tema">Modo Escuro</button>
+            </div>
+        </header>
+
+        <form id="taskForm">
+            <div class="field">
+                <textarea id="taskInput" placeholder="Nova tarefa (escreva o que precisa fazer hoje)" aria-label="Tarefa" required></textarea>
+            </div>
+            <button type="submit" class="add-btn">Adicionar</button>
+        </form>
+
+        <div class="meta">
+            <span class="chip" id="count">0 tarefas</span>
+            <span class="chip" id="undone">0 pendentes</span>
+        </div>
+
+        <div class="list" id="taskList" aria-live="polite"></div>
+
+        <footer>Escreva sua tarefa e clique em <strong>Adicionar</strong>. As tarefas são salvas no navegador.</footer>
+    </div>
+
+    <script src="script.js"></script>
+
+    <div class="rodape">
+        By João Victor de Paula - 01/2026
+    </div>
+</body>
+</html>
