@@ -14,9 +14,25 @@
         <header>
             <h1>My Routine <span class="brand-sub">— Seu dia mais produtivo</span></h1>
             <div class="controls">
+                <button id="analyticsBtn" class="theme-toggle" title="Ver análises">Analytics</button>
                 <button id="themeToggle" class="theme-toggle" title="Alternar tema">Modo Escuro</button>
             </div>
         </header>
+
+        <!-- Analytics Modal -->
+        <div class="modal" id="analyticsModal" aria-hidden="true">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Analytics — My Routine</h2>
+                    <button id="closeAnalytics" class="icon-btn" title="Fechar">✕</button>
+                </header>
+                <div class="charts">
+                    <div class="chart-card"><h3>Tarefas — Concluídas vs Pendentes</h3><canvas id="chartCompleted"></canvas></div>
+                    <div class="chart-card"><h3>Distribuição por Urgência</h3><canvas id="chartUrgency"></canvas></div>
+                    <div class="chart-card"><h3>Tempo médio de resolução (min)</h3><canvas id="chartAvgTime"></canvas></div>
+                </div>
+            </div>
+        </div>
 
         <form id="taskForm">
             <div class="field">
@@ -35,6 +51,7 @@
         <footer>Escreva sua tarefa e clique em <strong>Adicionar</strong>. As tarefas são salvas no navegador.</footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 
     <div class="rodape">
